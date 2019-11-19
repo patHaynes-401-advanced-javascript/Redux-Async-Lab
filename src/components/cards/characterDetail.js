@@ -1,24 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Detail.css';
 
-const CharacterDetail = ({ id, name, status, species, gender, imageUrl }) => (
-  <section>
-    <h2>{name}</h2>
-    <img src={imageUrl} />
-    <p>{status}</p>
-    <p>{species}</p>
-    <p>{gender}</p>
-    <p>{id}</p>
-  </section>
+const CharacterDetail = ({ name, status, species, gender, imgUrl }) => (
+  <div className={styles.Detail}>
+    <section >
+      <h2>{name}</h2>
+      <img src={imgUrl} />
+      <p>{status}</p>
+      <p>{species}</p>
+      <p>{gender}</p>
+    </section>
+
+  </div>
 );
 
 CharacterDetail.propTypes = {
   name: PropTypes.string.isRequired,
-  imageUrl: PropTypes.string.isRequired,
-  status: PropTypes.number.isRequired,
+  status: PropTypes.string.isRequired,
   species: PropTypes.string.isRequired,
   gender: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
+  imgUrl: PropTypes.string.isRequired
 };
 
 export default CharacterDetail;
