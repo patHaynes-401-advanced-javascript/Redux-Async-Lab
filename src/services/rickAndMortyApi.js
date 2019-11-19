@@ -1,6 +1,5 @@
-export const getSingleCharacter = () => {
-  const randomCharacter = Math.floor(Math.random() * 10) + 1;
-  return fetch(`https://rickandmortyapi.com/api/character/${randomCharacter}`)
+export const getSingleCharacter = (character) => {
+  return fetch(`https://rickandmortyapi.com/api/character/${character}`)
     .then(res => ([res.ok, res.json()]))
     .then(([ok, json]) => {
       if(!ok) throw 'Unable to fetch characters';
@@ -30,7 +29,7 @@ export const getCharacters = () => {
       name: character.name,
       species: character.species,
       status: character.status,
-      imgUrl: character.image
+      image: character.image
     })
     ));
 };

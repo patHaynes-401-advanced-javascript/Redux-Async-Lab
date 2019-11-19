@@ -4,7 +4,8 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
-import DisplayCards from '../containers/DisplayCards';
+import DisplayCharacters from '../containers/DisplayCharacters';
+import DisplayCharacterDetail from '../containers/DisplayCharacterDetail';
 import Header from './header/Header';
 
 export default function App() {
@@ -12,7 +13,8 @@ export default function App() {
     <Router>
       <Header />
       <Switch>
-        <Route exact path="/" component={DisplayCards} />
+        <Route exact path="/" component={DisplayCharacters} />
+        <Route path="/cards/:id" component={DisplayCharacterDetail} />
       </Switch>
     </Router>
   );

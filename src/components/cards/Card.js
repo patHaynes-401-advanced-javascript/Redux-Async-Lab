@@ -1,21 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const Card = ({ name, imgUrl }) => (
-  // <Link to={`/cards/${id}`}>
-  <figure>
-    <img src={imgUrl} />
-    <figcaption>{name}</figcaption>
-  </figure>
-
-
+const Card = ({ id, name, image }) => (
+  <Link to={`/cards/${id}`}>
+    <figure>
+      <img src={image} />
+      <figcaption>{name}</figcaption>
+    </figure>
+  </Link>
 );
 
 Card.propTypes = {
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
-  imgUrl: PropTypes.string.isRequired
+  image: PropTypes.string.isRequired
 };
 
 export default Card;
