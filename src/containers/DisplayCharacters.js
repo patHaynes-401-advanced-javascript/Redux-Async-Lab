@@ -23,7 +23,7 @@ DisplayCards.propTypes = {
   characters: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired
+    imgUrl: PropTypes.string.isRequired
   })).isRequired,
   loading: PropTypes.bool.isRequired,
   fetchCharacters: PropTypes.func.isRequired
