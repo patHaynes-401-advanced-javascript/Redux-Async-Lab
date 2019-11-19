@@ -8,11 +8,12 @@ import { getSingleCharacter, getCharactersLoading } from '../selectors/character
 const DisplayCharacterDetail = ({ match }) => {
   const character = useSelector(state => getSingleCharacter(state, match.params.id));
   const loading = useSelector(getCharactersLoading);
-  const dispactch = useDispatch();
+  const dispatch = useDispatch();
 
   useEffect(() => {
+    console.log(character);
     if(!character) {
-      dispactch(fetchCharacter(match.params.id));
+      dispatch(fetchCharacter(match.params.id));
     }
   }, []);
 
