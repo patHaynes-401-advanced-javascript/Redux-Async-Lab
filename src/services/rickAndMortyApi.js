@@ -17,8 +17,8 @@ export const searchCharacters = (search, page) => {
     });
 };
 
-export const getCharacters = (page = 1) => {
-  return fetch(`https://rickandmortyapi.com/api/character/?page=${page}`)
+export const getCharacters = () => {
+  return fetch('https://rickandmortyapi.com/api/character/')
     .then(res => ([res.ok, res.json()]))
     .then(([ok, json]) => {
       if(!ok) throw 'Unable to fetch characters';

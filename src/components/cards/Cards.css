@@ -1,4 +1,12 @@
 .Cards {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
+  margin-left: 150px;
+
+li {
+    list-style-type: none;
+    text-align: center;
+  }
+
 }
