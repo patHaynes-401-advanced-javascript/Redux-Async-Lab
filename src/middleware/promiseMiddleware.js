@@ -6,6 +6,7 @@ export const promiseMiddleware = store => next => action => {
     });
 
     action.payload.then(fulfilledValue => {
+      console.log(fulfilledValue);
       store.dispatch({
         type: action.type,
         payload: fulfilledValue

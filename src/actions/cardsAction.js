@@ -24,7 +24,7 @@ export const fetchCharacters = () => dispatch => {
 export const FETCH_CHARACTER_LOADING = 'FETCH_CHARACTER_LOADING';
 export const FETCH_CHARACTER = 'FETCH_CHARACTER';
 export const FETCH_CHARACTER_DONE = 'FETCH_CHARACTER_DONE';
-export const fetchCard = id => ({
+export const fetchCharacter = id => ({
   type: FETCH_CHARACTER,
   payload: getSingleCharacter(id),
   pendingType: FETCH_CHARACTER_LOADING,

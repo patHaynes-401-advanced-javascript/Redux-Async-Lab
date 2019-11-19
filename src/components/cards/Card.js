@@ -1,15 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const Card = ({ name, imgUrl }) => (
-  // <Link to={`/cards/${id}`}>
-  <figure>
-    <img src={imgUrl} />
-    <figcaption>{name}</figcaption>
-  </figure>
-
-
+const Card = ({ id, name, imgUrl }) => (
+  <Link to={`/cards/${id}`}>
+    <figure>
+      <img src={imgUrl} />
+      <figcaption>{name}</figcaption>
+    </figure>
+  </Link>
 );
 
 Card.propTypes = {
